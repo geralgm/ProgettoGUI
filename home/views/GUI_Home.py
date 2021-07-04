@@ -9,34 +9,36 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from listadipendenti.views.GUI_ListaDipendenti import Ui_ListaDipendenti
+from listadipendenti.views.GUI_ListaDipendenti import GUI_ListaDipendenti
+from PyQt5.QtWidgets import QWidget
 import images
 
-class Ui_Home(object):
-    def setupUi(self, Home):
-        Home.setObjectName("Home")
-        Home.setWindowModality(QtCore.Qt.NonModal)
-        Home.setEnabled(True)
-        Home.resize(730, 584)
-        Home.setMinimumSize(QtCore.QSize(730, 584))
-        Home.setMaximumSize(QtCore.QSize(730, 584))
-        Home.setLayoutDirection(QtCore.Qt.LeftToRight)
-        Home.setAutoFillBackground(False)
-        Home.setStyleSheet("")
-        self.sfondo = QtWidgets.QLabel(Home)
+class GUI_Home(QWidget):
+    def __init__(self, parent=None):
+        super(GUI_Home, self).__init__(parent)
+        self.setObjectName("Home")
+        self.setWindowModality(QtCore.Qt.NonModal)
+        self.setEnabled(True)
+        self.resize(730, 584)
+        self.setMinimumSize(QtCore.QSize(730, 584))
+        self.setMaximumSize(QtCore.QSize(730, 584))
+        self.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.setAutoFillBackground(False)
+        self.setStyleSheet("")
+        self.sfondo = QtWidgets.QLabel(self)
         self.sfondo.setGeometry(QtCore.QRect(0, 0, 730, 584))
         self.sfondo.setStyleSheet("")
         self.sfondo.setText("")
         self.sfondo.setPixmap(QtGui.QPixmap(":/newPrefix/texture4.jpg"))
         self.sfondo.setScaledContents(True)
         self.sfondo.setObjectName("sfondo")
-        self.label_Logo = QtWidgets.QLabel(Home)
+        self.label_Logo = QtWidgets.QLabel(self)
         self.label_Logo.setGeometry(QtCore.QRect(240, 30, 201, 171))
         self.label_Logo.setText("")
         self.label_Logo.setPixmap(QtGui.QPixmap(":/newPrefix/logoRistorante.png"))
         self.label_Logo.setScaledContents(True)
         self.label_Logo.setObjectName("label_Logo")
-        self.Button_Ordini = QtWidgets.QPushButton(Home)
+        self.Button_Ordini = QtWidgets.QPushButton(self)
         self.Button_Ordini.setGeometry(QtCore.QRect(70, 240, 250, 100))
         self.Button_Ordini.setStyleSheet("QPushButton#Button_Ordini{\n"
 "  background-color: #663300;\n"
@@ -65,7 +67,7 @@ class Ui_Home(object):
 "\n"
 "")
         self.Button_Ordini.setObjectName("Button_Ordini")
-        self.Button_Clienti = QtWidgets.QPushButton(Home)
+        self.Button_Clienti = QtWidgets.QPushButton(self)
         self.Button_Clienti.setGeometry(QtCore.QRect(70, 340, 250, 100))
         self.Button_Clienti.setStyleSheet("QPushButton#Button_Clienti{\n"
 "  background-color:#804d00;\n"
@@ -88,7 +90,7 @@ class Ui_Home(object):
 "QPushButton#Button_Clienti:hover {background-color:      #ffe066;}\n"
 "")
         self.Button_Clienti.setObjectName("Button_Clienti")
-        self.Button_Prenotazioni = QtWidgets.QPushButton(Home)
+        self.Button_Prenotazioni = QtWidgets.QPushButton(self)
         self.Button_Prenotazioni.setGeometry(QtCore.QRect(70, 440, 250, 100))
         self.Button_Prenotazioni.setStyleSheet("QPushButton#Button_Prenotazioni{\n"
 "  background-color: #663300;\n"
@@ -117,7 +119,7 @@ class Ui_Home(object):
 "\n"
 "")
         self.Button_Prenotazioni.setObjectName("Button_Prenotazioni")
-        self.Button_Dipendenti = QtWidgets.QPushButton(Home)
+        self.Button_Dipendenti = QtWidgets.QPushButton(self)
         self.Button_Dipendenti.setGeometry(QtCore.QRect(390, 240, 250, 100))
         self.Button_Dipendenti.setStyleSheet("QPushButton#Button_Dipendenti{\n"
 "  background-color:#804d00;\n"
@@ -140,7 +142,7 @@ class Ui_Home(object):
 "QPushButton#Button_Dipendenti:hover {background-color:      #ffe066;}\n"
 "")
         self.Button_Dipendenti.setObjectName("Button_Dipendenti")
-        self.Button_Magazzino = QtWidgets.QPushButton(Home)
+        self.Button_Magazzino = QtWidgets.QPushButton(self)
         self.Button_Magazzino.setGeometry(QtCore.QRect(390, 340, 250, 100))
         self.Button_Magazzino.setStyleSheet("QPushButton#Button_Magazzino{\n"
 "  background-color: #663300;\n"
@@ -169,7 +171,7 @@ class Ui_Home(object):
 "\n"
 "")
         self.Button_Magazzino.setObjectName("Button_Magazzino")
-        self.Button_Fornitori = QtWidgets.QPushButton(Home)
+        self.Button_Fornitori = QtWidgets.QPushButton(self)
         self.Button_Fornitori.setGeometry(QtCore.QRect(390, 440, 250, 100))
         self.Button_Fornitori.setStyleSheet("QPushButton#Button_Fornitori{\n"
 "  background-color:#804d00;\n"
@@ -192,13 +194,13 @@ class Ui_Home(object):
 "QPushButton#Button_Fornitori:hover {background-color:      #ffe066;}\n"
 "")
         self.Button_Fornitori.setObjectName("Button_Fornitori")
+        self.Button_Dipendenti.clicked.connect(self.go_lista_dipendenti) 
 
-        self.retranslateUi(Home)
-        QtCore.QMetaObject.connectSlotsByName(Home)
+        self.retranslateUi()
+        QtCore.QMetaObject.connectSlotsByName(self)
 
-    def retranslateUi(self, Home):
+    def retranslateUi(self):
         _translate = QtCore.QCoreApplication.translate
-        Home.setWindowTitle(_translate("Home", "Form"))
         self.Button_Ordini.setText(_translate("Home", "Ordini"))
         self.Button_Clienti.setText(_translate("Home", "Clienti"))
         self.Button_Prenotazioni.setText(_translate("Home", "Prenotazioni"))
@@ -206,8 +208,6 @@ class Ui_Home(object):
         self.Button_Magazzino.setText(_translate("Home", "Magazzino"))
         self.Button_Fornitori.setText(_translate("Home", "Fornitori"))
 
-        self.Button_Dipendenti.clicked.connect(self.go_lista_dipendenti)
-
     def go_lista_dipendenti(self):
-        vista_lista_dipendenti = Ui_ListaDipendenti()
-        vista_lista_dipendenti.show()
+        self.vista_lista_dipendenti = GUI_ListaDipendenti()
+        self.vista_lista_dipendenti.show()

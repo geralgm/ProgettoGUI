@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'GUI_ListaDipendenti.ui'
+# Form implementation generated from reading ui file 'GUI_self.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -9,68 +9,77 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QWidget
+import images2
 
 
-class Ui_ListaDipendenti(object):
-    def setupUi(self, ListaDipendenti):
-        ListaDipendenti.setObjectName("ListaDipendenti")
-        ListaDipendenti.resize(699, 503)
-        ListaDipendenti.setStyleSheet("")
-        self.label = QtWidgets.QLabel(ListaDipendenti)
+class GUI_ListaDipendenti(QWidget):
+    def __init__(self):
+        super(GUI_ListaDipendenti, self).__init__()
+
+        self.setObjectName("Form")
+        self.resize(699, 503)
+
+        ##############################
+        self.label = QtWidgets.QLabel(self)
         self.label.setGeometry(QtCore.QRect(0, 0, 700, 500))
         self.label.setText("")
         self.label.setPixmap(QtGui.QPixmap(":/newPrefix/textureDipendente.jpg"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
-        self.listWidget = QtWidgets.QListWidget(ListaDipendenti)
+
+        self.listWidget = QtWidgets.QListWidget(self)
         self.listWidget.setGeometry(QtCore.QRect(20, 80, 491, 401))
         self.listWidget.setObjectName("listWidget")
-        self.Button_ApriDipendente = QtWidgets.QPushButton(ListaDipendenti)
+
+        self.Button_ApriDipendente = QtWidgets.QPushButton(self)
         self.Button_ApriDipendente.setGeometry(QtCore.QRect(520, 80, 150, 70))
         self.Button_ApriDipendente.setStyleSheet("QPushButton#Button_ApriDipendente{\n"
-"  background-color:#293d3d;\n"
-"  border-radius: 30px;\n"
-"  color: white;\n"
-"  padding: 16px 32px;\n"
-"  text-align: center;\n"
-"  text-decoration: none;\n"
-"  display: inline-block;\n"
-"  font-size: 16px;\n"
-"  margin: 4px 2px;\n"
-"  transition-duration: 0.4s;\n"
-"  cursor: pointer;\n"
-"}\n"
-"QPushButton#Button_ApriDipendente:pressed{\n"
-" background-color: white; \n"
-"  color: black; \n"
-"  border: 3px solid #4CAF50;\n"
-"}\n"
-"QPushButton#Button_ApriDipendente:hover {background-color:      #d1e0e0;}\n"
-"")
+                                                 "  background-color:#293d3d;\n"
+                                                 "  border-radius: 30px;\n"
+                                                 "  color: white;\n"
+                                                 "  padding: 16px 32px;\n"
+                                                 "  text-align: center;\n"
+                                                 "  text-decoration: none;\n"
+                                                 "  display: inline-block;\n"
+                                                 "  font-size: 16px;\n"
+                                                 "  margin: 4px 2px;\n"
+                                                 "  transition-duration: 0.4s;\n"
+                                                 "  cursor: pointer;\n"
+                                                 "}\n"
+                                                 "QPushButton#Button_ApriDipendente:pressed{\n"
+                                                 " background-color: white; \n"
+                                                 "  color: black; \n"
+                                                 "  border: 3px solid #4CAF50;\n"
+                                                 "}\n"
+                                                 "QPushButton#Button_ApriDipendente:hover {background-color:      #d1e0e0;}\n"
+                                                 "")
         self.Button_ApriDipendente.setObjectName("Button_ApriDipendente")
-        self.Button_NuovoDipendente = QtWidgets.QPushButton(ListaDipendenti)
+
+        self.Button_NuovoDipendente = QtWidgets.QPushButton(self)
         self.Button_NuovoDipendente.setGeometry(QtCore.QRect(520, 160, 150, 70))
         self.Button_NuovoDipendente.setStyleSheet("QPushButton#Button_NuovoDipendente{\n"
-"  background-color:#293d3d;\n"
-"  border-radius: 30px;\n"
-"  color: white;\n"
-"  padding: 16px 32px;\n"
-"  text-align: center;\n"
-"  text-decoration: none;\n"
-"  display: inline-block;\n"
-"  font-size: 16px;\n"
-"  margin: 4px 2px;\n"
-"  transition-duration: 0.4s;\n"
-"  cursor: pointer;\n"
-"}\n"
-"QPushButton#Button_NuovoDipendente:pressed{\n"
-" background-color: white; \n"
-"  color: black; \n"
-"  border: 3px solid #4CAF50;\n"
-"}\n"
-"QPushButton#Button_NuovoDipendente:hover {background-color:      #d1e0e0;}")
+                                                  "  background-color:#293d3d;\n"
+                                                  "  border-radius: 30px;\n"
+                                                  "  color: white;\n"
+                                                  "  padding: 16px 32px;\n"
+                                                  "  text-align: center;\n"
+                                                  "  text-decoration: none;\n"
+                                                  "  display: inline-block;\n"
+                                                  "  font-size: 16px;\n"
+                                                  "  margin: 4px 2px;\n"
+                                                  "  transition-duration: 0.4s;\n"
+                                                  "  cursor: pointer;\n"
+                                                  "}\n"
+                                                  "QPushButton#Button_NuovoDipendente:pressed{\n"
+                                                  " background-color: white; \n"
+                                                  "  color: black; \n"
+                                                  "  border: 3px solid #4CAF50;\n"
+                                                  "}\n"
+                                                  "QPushButton#Button_NuovoDipendente:hover {background-color:      #d1e0e0;}")
         self.Button_NuovoDipendente.setObjectName("Button_NuovoDipendente")
-        self.Button_Home = QtWidgets.QPushButton(ListaDipendenti)
+
+        self.Button_Home = QtWidgets.QPushButton(self)
         self.Button_Home.setGeometry(QtCore.QRect(520, 240, 150, 70))
         font = QtGui.QFont()
         font.setFamily("HoloLens MDL2 Assets")
@@ -79,39 +88,35 @@ class Ui_ListaDipendenti(object):
         font.setStrikeOut(False)
         self.Button_Home.setFont(font)
         self.Button_Home.setStyleSheet("QPushButton#Button_Home{\n"
-"  background-color:#293d3d;\n"
-"  border-radius: 30px;\n"
-"  color: white;\n"
-"  padding: 16px 32px;\n"
-"  text-align: center;\n"
-"  text-decoration: none;\n"
-"  display: inline-block;\n"
-"  font-size: 20px;\n"
-"  margin: 4px 2px;\n"
-"  transition-duration: 0.4s;\n"
-"  cursor: pointer;\n"
-"}\n"
-"QPushButton#Button_Home:pressed{\n"
-" background-color: white; \n"
-"  color: black; \n"
-"  border: 3px solid #4CAF50;\n"
-"}\n"
-"QPushButton#Button_Home:hover {background-color:      #d1e0e0;}\n"
-"")
+                                       "  background-color:#293d3d;\n"
+                                       "  border-radius: 30px;\n"
+                                       "  color: white;\n"
+                                       "  padding: 16px 32px;\n"
+                                       "  text-align: center;\n"
+                                       "  text-decoration: none;\n"
+                                       "  display: inline-block;\n"
+                                       "  font-size: 20px;\n"
+                                       "  margin: 4px 2px;\n"
+                                       "  transition-duration: 0.4s;\n"
+                                       "  cursor: pointer;\n"
+                                       "}\n"
+                                       "QPushButton#Button_Home:pressed{\n"
+                                       " background-color: white; \n"
+                                       "  color: black; \n"
+                                       "  border: 3px solid #4CAF50;\n"
+                                       "}\n"
+                                       "QPushButton#Button_Home:hover {background-color:      #d1e0e0;}\n"
+                                       "")
         self.Button_Home.setObjectName("Button_Home")
+        ##############################
 
-        self.retranslateUi(ListaDipendenti)
-        QtCore.QMetaObject.connectSlotsByName(ListaDipendenti)
+        self.retranslateUi()
+        QtCore.QMetaObject.connectSlotsByName(self)
 
-    def retranslateUi(self, ListaDipendenti):
+
+    def retranslateUi(self):
         _translate = QtCore.QCoreApplication.translate
-        ListaDipendenti.setWindowTitle(_translate("ListaDipendenti", "Form"))
-        self.Button_ApriDipendente.setText(_translate("ListaDipendenti", "Apri"))
-        self.Button_NuovoDipendente.setText(_translate("ListaDipendenti", "Nuovo"))
+        self.setWindowTitle(_translate("Form", "Form"))
+        self.Button_ApriDipendente.setText(_translate("self", "Apri"))
+        self.Button_NuovoDipendente.setText(_translate("self", "Nuovo"))
         self.Button_Home.setText(_translate("ListaDipendenti", ""))
-
-    def show(self):
-        pass
-
-
-import images2
