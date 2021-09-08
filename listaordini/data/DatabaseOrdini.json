@@ -1,0 +1,90 @@
+[
+  {
+    "cod_fattura":"200AE001",
+    "stato": "Consegnato" ,
+    "numero_tavola": "10",
+    "data_ordine": "2021-05-26" ,
+    "importo_totale": 50,
+    "quantita_totale": 2
+  },
+  {
+    "cod_fattura": "2054FGGD",
+    "stato": "Pronto per consegnare" ,
+    "numero_tavola": "5",
+    "data_ordine": "2021-06-02" ,
+    "importo_totale": 30,
+    "quantita_totale": 1
+  },
+   {
+    "cod_fattura":"200AE003" ,
+    "stato": "Pronto per consegnare" ,
+    "numero_tavola": "10",
+    "data_ordine": "2021-05-26" ,
+    "importo_totale": 50,
+     "quantita_totale": 1
+  },
+   {
+    "cod_fattura":"200AE001" ,
+    "stato": "Consegnato" ,
+    "numero_tavola": "10",
+    "data_ordine": "2021-05-26" ,
+    "importo_totale": 50,
+     "quantita_totale": 2
+  },
+   {
+    "cod_fattura":"200AE009" ,
+    "stato": "Consegnato" ,
+    "numero_tavola": "10",
+    "data_ordine": "2021-05-26" ,
+    "importo_totale": 50,
+     "quantita_totale": 2
+  },
+   {
+    "cod_fattura":"200AE012" ,
+    "stato": "pronto per cosegnare" ,
+    "numero_tavola": "10",
+    "data_ordine": "2021-05-26" ,
+    "importo_totale": 50,
+     "quantita_totale": 2
+  },
+   {
+    "cod_fattura":"200AE34" ,
+    "stato": "in preparazione" ,
+    "numero_tavola": "10",
+    "data_ordine": "2021-05-26" ,
+    "importo_totale": 50,
+     "quantita_totale": 2
+   },
+   {
+    "cod_fattura":"200BE001" ,
+   "stato": "in preparazione" ,
+    "numero_tavola": "10",
+    "data_ordine": "2021-05-26" ,
+    "importo_totale": 50,
+     "quantita_totale": 2
+  },
+  {
+    "cod_fattura":"200BE001" ,
+  "stato": "Consegnato" ,
+    "numero_tavola": "10",
+    "data_ordine": "2021-05-26" ,
+    "importo_totale": 50,
+     "quantita_totale": 2
+  },
+  {
+    "cod_fattura":"2004E001" ,
+   "stato": "in preparazione" ,
+    "numero_tavola": "10",
+    "data_ordine": "2021-05-26" ,
+    "importo_totale": 50,
+     "quantita_totale": 2
+  },
+  {
+    "cod_fattura":"200RE001" ,
+   "stato": "pronto per consegnare" ,
+    "numero_tavola": "10",
+    "data_ordine": "2021-05-26" ,
+    "importo_totale": 50,
+     "quantita_totale": 2
+  }
+]
